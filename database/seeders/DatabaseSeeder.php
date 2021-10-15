@@ -14,13 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Je crée 5 catégories
-        $categories = Category::factory()->count(5)->create();
-        // Je crée 10 films et attache aléatoirement une catégorie à chaque film
-        Film::factory()->count(10)->make()
-        ->each(function($film) use ($categories) {
-        $film->category_id = $categories->random()->id;
-        $film->save();
+        // Je crée 5 consultation
+        $consultations = Consultation::factory()->count(5)->create();
+        // Je crée 10 personnes et attache aléatoirement une consultation à chaque personne
+        Consultation::factory()->count(10)->make()
+        ->each(function($consultation) use ($personnes) {
+        $consultation->personne_id = $personnes->random()->id;
+        $consultation->save();
         });
     }
 }
