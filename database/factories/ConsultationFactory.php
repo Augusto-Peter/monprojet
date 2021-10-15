@@ -22,7 +22,10 @@ class ConsultationFactory extends Factory
     public function definition()
     {
         return [
-            //
-        ];
+            'date' => $this->faker->word,
+            'methode_therapeutique' => $this->faker->word,
+            'therapeute' => $this->faker->word,
+            'description' => $this->faker->sentence()
+            ];
     }
 }

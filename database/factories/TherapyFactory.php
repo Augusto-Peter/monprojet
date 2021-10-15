@@ -22,7 +22,10 @@ class TherapyFactory extends Factory
     public function definition()
     {
         return [
-            //
-        ];
+            'sujet' => $this->faker->word,
+            'tarif' => $this->faker->word,
+            'statut' => $this->faker->word,
+            'fiche_patient' => $this->faker->word,
+            ];
     }
 }
