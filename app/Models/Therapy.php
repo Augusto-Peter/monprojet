@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Therapy extends Model
 {
     use HasFactory;
+    
+    public function consultation()
+    {
+    return $this->HasMany(Consultation::class);
+    }
 }

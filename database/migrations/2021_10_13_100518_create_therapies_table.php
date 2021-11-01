@@ -16,7 +16,7 @@ class CreateTherapiesTable extends Migration
         Schema::create('therapies', function (Blueprint $table) {
             $table->id();
             $table->string('sujet', 256);
-            $table->decimal('tarif',5,2);
+            $table->float('tarif',5,2);
             $table->string('statut',256);
             $table->string('fiche_patient',256);
             $table->timestamps();

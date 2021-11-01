@@ -23,12 +23,12 @@ class DocumentFactory extends Factory
     {
         return [
             'nom' => $this->faker->word,
-            'type' => $this->faker->word,
-            'taille' => $this->faker->word,
-            'auteur' => $this->faker->word,
-            'pv' => $this->faker->word,
-            'chemin' => $this->faker->word,
-            'description' => $this->faker->sentence()
+            'type' => $this->faker->text,
+            'taille' => $this->faker->numberBetween(1, 1000),
+            'auteur' => $this->faker->text,
+            'pv' => $this->faker->text,
+            'chemin' => $this->faker->text,
+            'description' => $this->faker->text
             ];
     }
 }

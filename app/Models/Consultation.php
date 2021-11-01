@@ -19,4 +19,12 @@ class Consultation extends Model
     {
     return $this->belongsTo(Therapy::class);
     }
+    public function projet()
+    {
+    return $this->belongsTo(Projet::class);
+    }
+    public function document()
+    {
+    return $this->hasMany(Document::class);
+    }
 }

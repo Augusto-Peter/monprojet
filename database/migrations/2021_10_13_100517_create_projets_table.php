@@ -16,8 +16,8 @@ class CreateProjetsTable extends Migration
         Schema::create('projets', function (Blueprint $table) {
             $table->id();
             $table->string('nom', 256);
-            $table->date('ddd');
-            $table->date('ddf');
+            $table->date('d_d_d');
+            $table->date('d_d_f');
             $table->string('etape', 256);
             $table->string('pv', 256);
             $table->string('chef_projet', 256);
