@@ -22,12 +22,12 @@ class ProjetFactory extends Factory
     public function definition()
     {
         return [
-            'nom' => $this->faker->word,
-            'd_d_d' => $this->faker->word,
-            'd_d_f' => $this->faker->word,
-            'etape' => $this->faker->word,
-            'pv' => $this->faker->word,
-            'chef_projet' => $this->faker->word,
+            'nom' => $this->faker->text,
+            'd_d_d' => $this->faker->date,
+            'd_d_f' => $this->faker->date,
+            'etape' => $this->faker->text,
+            'pv' => $this->faker->text,
+            'chef_projet' => $this->faker->text,
             ];
     }
 }

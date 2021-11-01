@@ -2,7 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\ConsultationController;
+use App\Http\Controllers\Api\ConsultationController;
+use App\Http\Controllers\Api\PersonneController;
+use App\Http\Controllers\Api\ProjetController;
+use App\Http\Controllers\Api\TherapyController;
+use App\Http\Controllers\Api\DocumentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +22,9 @@ use App\Models\ConsultationController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 
-    Route::apiResource('consultaion', ConsultationController::class);
+    Route::resource('consultations', ConsultationController::class);
+    Route::resource('documents', DocumentController::class);
+    Route::resource('projets', ProjetController::class);
+    Route::resource('therapies', TherapyController::class);
+    Route::resource('personnes', PersonneController::class);
 });
